@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV#2. HTML, CSS & Git Basics</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contacts</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#skills">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#code">Code</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#experience">Experience</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#courses">Courses</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#languages">Languages</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="content">
+        <div class="block">
+          <img
+            class="photo"
+            src="https://img.icons8.com/ios/100/000000/cat--v1.png"
+            alt="Photo"
+          />
+          <h1 class="title">Zlata Kosarevich</h1>
+          <h2 class="subtitle">Junior Frontend Developer</h2>
+        </div>
+        <div class="block">
+          <h2 id="contact" class="subtitle">Contact information</h2>
+          <address class="contacts">
+            <a class="text text--bold" href="tel:+79031311216">
+              +7 903 1311216</a
+            >
+            <a class="text text--bold" href="mailto:z.kosarevitch@yandex.ru"
+              >z.kosarevitch@yandex.ru</a
+            >
+            <a class="text" href="tg://resolve?domain=zlavvitch"
+              ><strong>Telegram:</strong>@zlavvitch</a
+            >
+            <a class="text" href="https://github.com/zlavvitch"
+              ><strong>Github:</strong>zlavvitch</a
+            >
+          </address>
+        </div>
+        <div class="block">
+          <h2 id="about" class="subtitle">About myself</h2>
+          <p class="text text--about">
+            I want to change the scope of the activities, that's why I'm
+            currently taking courses in Front-End development. Everyone can
+            change their life for the better, so can I.
+          </p>
+        </div>
+        <div class="block">
+          <h2 id="skills" class="subtitle">Skills and Proficiency</h2>
+          <ul class="list">
+            <li class="list__item">HTML</li>
+            <li class="list__item">
+              CSS (Framework Bootstrap, Preprocessor SCSS, BEM methodology)
+            </li>
+            <li class="list__item">
+              JavaScript (Fundamentals,Functional Programming)
+            </li>
+            <li class="list__item">
+              Version control: Git (remote service GitHub
+            </li>
+            <li class="list__item">Module Bundlers: Webpack</li>
+            <li class="list__item">MacOS</li>
+            <li class="list__item">Editor: VSCode</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2 id="code" class="subtitle">Code example</h2>
+          <div class="code">
+            <p class="text text--bold">
+              const getDaysBetweenDates = (date1, date2) => {
+            </p>
+            <p class="text text--bold">
+              if (!date2) throw new TypeError('TypeError');
+            </p>
+            <p class="text text--bold">
+              let result = Math.trunc((new Date(date2).getTime() - new
+              Date(date1).getTime()) / 86400000);
+            </p>
+            <p class="text text--bold">
+              if (result === -0) return (result = 0);
+            </p>
+            <p class="text text--bold">return result;</p>
+            <p class="text text--bold">};</p>
+
+            <p class="text">
+              getDaysBetweenDates('1-1-2020', '1-2-2020'); // -> 1
+            </p>
+            <p class="text">
+              getDaysBetweenDates(1409796000000, 1409925600000); // -> 1
+            </p>
+            <p class="text">
+              getDaysBetweenDates('1-1-2020', 'дата'); // -> NaN
+            </p>
+            <p class="text">getDaysBetweenDates(null); // -> TypeError</p>
+            <p class="text">getDaysBetweenDates(new Date(2011, 6, 2, 6, 0),</p>
+            <p class="text">new Date(2012, 6, 2, 18, 0)); // -> 366</p>
+          </div>
+        </div>
+        <div class="block">
+          <h2 id="experience" class="subtitle">Work experience</h2>
+          <p class="text">educational projects</p>
+          <ul class="list">
+            <li class="list__item">
+              <a
+                class="list__link"
+                href="https://github.com/zlavvitch/ProjectKata"
+                >KataAcademy</a
+              >
+            </li>
+            <li class="list__item">
+              <a
+                class="list__link"
+                href="https://github.com/zlavvitch/Project-Fest"
+                >Professional</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2 id="courses" class="subtitle">Courses</h2>
+          <ul class="list">
+            <li class="list__item">
+              Innopolis University «Course Introduction to Front-End
+              Development» at the (completed)
+            </li>
+            <li class="list__item">
+              «Professional» Course «Full Stack Development» (in progress)
+            </li>
+            <li class="list__item">
+              KataAcademy Course «Front-End Development» (in progress)
+            </li>
+            <li class="list__item">
+              RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
+            </li>
+          </ul>
+        </div>
+        <div class="block">
+          <h2 id="languages" class="subtitle">Languages</h2>
+          <ul class="list">
+            <li class="list__item">English - Intermediate</li>
+            <li class="list__item">Russian - Native</li>
+            <li class="list__item">French - Basic</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <img
+        class="logo"
+        src="https://app.rs.school/static/images/logo-rsschool3.png"
+        alt="Logo RS-school"
+      />
+      <p class="text text--white">10/2022</p>
+      <a href="https://github.com/zlavvitch">
+        <img
+          src="https://img.icons8.com/ios/50/000000/github--v1.png"
+          alt="Logo Github"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
